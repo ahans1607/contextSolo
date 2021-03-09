@@ -22,7 +22,11 @@ console.log(changeContext(getSecret, map)); // prints "I don't know where I'm go
 
 ***********************************************************************/
 
-// your code here!
+function changeContext(func, object){
+  const funcWithoutBeingInvoked = func.bind(object)
+  return funcWithoutBeingInvoked()  // now it is invoked!!!
+
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
